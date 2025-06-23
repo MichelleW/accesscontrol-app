@@ -1,0 +1,27 @@
+
+/* File: src/components/AccessLog.css */
+.access-log {
+    margin-top: 2rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .access-log h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .access-log ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .access-log li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+  }
+  .access-log li:last-child {
+    border-bottom: none;
+  }
+  

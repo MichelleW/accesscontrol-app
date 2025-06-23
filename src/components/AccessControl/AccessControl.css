@@ -1,0 +1,182 @@
+/* File: src/App.css */
+.dashboard {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+    background: #f9f9f9;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+/* File: src/components/Sidebar.css */
+.sidebar {
+    width: 200px;
+    background: #2d3e50;
+    color: white;
+    padding: 1rem;
+}
+
+.sidebar .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .user-info {
+    display: flex; 
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.sidebar .user-details h2 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: white;
+    text-align: center;
+}
+
+.sidebar .user-role {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 1rem 0;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar li a, .sidebar li a:visited {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: block;
+    width: 100%;
+}
+
+.sidebar li a:hover, .sidebar li a:active {
+    color: #61dafb;
+}
+  
+
+/* File: src/components/Profile.css */
+.profile {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    transition: background 0.2s;
+}
+
+.profile:hover {
+    background: #f0f4ff;
+}
+
+.profile-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.role-badge {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007bff;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+    z-index: 2;
+}
+
+/* File: src/components/VideoGallery.css */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.video-card {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.video-card.highlight {
+    border: 2px solid #ffa500;
+    background: #e6f0ff;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: #2d3e50;
+}
+
+.user-role {
+    font-size: 0.8rem;
+    color: #666;
+}
