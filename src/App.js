@@ -2,9 +2,9 @@
 
 import React from 'react';
 import './App.css';
-import './style.scss';
+import './components/VerkadaPlayer/style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import VerkadaPlayer from './VerkadaPlayer';
+import VerkadaPlayer from './components/VerkadaPlayer/VerkadaPlayer';
 
 
 
