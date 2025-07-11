@@ -66,6 +66,20 @@ const createMarkers = (frames, currentFrame, onMarkerClick) => {
     ));
 }
 
+const TimeTicker = ({ height = 24, color = "#222", width = 2 }) => (
+    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line
+            x1={width / 2}
+            y1="0"
+            x2={width / 2}
+            y2={height}
+            stroke={color}
+            strokeWidth={width}
+            strokeLinecap="round"
+        />
+    </svg>
+);
+
 const Frame = ({ frame, currentFrame, onMarkerClick, play, togglePlay }) => {
     const frames = getFrames();
 
@@ -109,6 +123,7 @@ function VerkadaPlayer() {
 
     const handleMarkerClick = (idx) => {
         setCurrentFrame(idx);
+        setPlay(false); // Stop playback when a marker is clicked
     };
 
     useEffect(() => {
@@ -143,7 +158,7 @@ function VerkadaPlayer() {
         setPlay(prev => !prev);
     }
     return (
-        <div className="Verka">
+        <div className="VerkadaPlayer">
             <Frame
                 frame={frames[currentFrame]}
                 currentFrame={currentFrame}
