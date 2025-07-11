@@ -352,7 +352,7 @@ body {
 .shadow-lg { box-shadow: $shadow-lg; }
 
 my code: 
-import React from 'react';
+``import React from 'react';
 import './App.css';
 import './verkadaStyle.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -478,10 +478,11 @@ function VerkadaPlayer() {
 
 export default VerkadaPlayer;
 
+
 insert screenshot of mockup: 
+ ![Screenshot of mockup](verkada.png)
 
-
-
+  
 
 
 
