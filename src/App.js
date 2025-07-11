@@ -1,14 +1,19 @@
 // File: src/App.js
 
+import React from 'react';
 import './App.css';
+import './style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import VerkadaPlayer from './VerkadaPlayer';
 
-import AccessRoles from './components/AccessRoles/AccessRoles'
+
+
 function App() {
 
+
   return (
-    <div className="dashboard">
-      <AccessRoles />
+    <div className="App">
+      <VerkadaPlayer />
     </div>
   );
 }

@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import './verkadaStyle.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -67,8 +66,7 @@ const createMarkers = (frames, currentFrame, onMarkerClick) => {
     ));
 }
 
-const Frame = ({ frame, currentFrame, onMarkerClick }) => {
-    const [play, setPlay] = React.useState(false);
+const Frame = ({ frame, currentFrame, onMarkerClick, play, togglePlay }) => {
     const frames = getFrames();
 
     return (
@@ -93,7 +91,7 @@ const Frame = ({ frame, currentFrame, onMarkerClick }) => {
                 alt={`Frame ${frame.frameNumber + 1}`}
             />
             <div className="player">
-                <div className='controls' onClick={() => setPlay(prev => !prev)}>
+                <div className='controls' onClick={togglePlay}>
                     {play ? <PlayIcon /> : <PauseIcon />}
                 </div>
                 <div className="markers-container">
@@ -107,17 +105,51 @@ const Frame = ({ frame, currentFrame, onMarkerClick }) => {
 function VerkadaPlayer() {
     const [frames] = React.useState(getFrames());
     const [currentFrame, setCurrentFrame] = React.useState(0);
+    const [play, setPlay] = React.useState(false);
 
     const handleMarkerClick = (idx) => {
         setCurrentFrame(idx);
     };
 
+    useEffect(() => {
+        if (!play) return;
+
+        const timeout = setTimeout(() => {
+            setCurrentFrame(prev => {
+                const next = prev + 1;
+                if (next >= frames.length) {
+                    setPlay(false); // stop playback
+                    return 0; // reset to first frame
+                }
+                return next;
+            });
+        }, 10000 / API_CONFIG.framesPerSecond); // ~20ms if 50fps
+
+        return () => clearTimeout(timeout);
+
+        /*
+        `currentFrame` and `frames.length` are included as dependencies in the `useEffect` hook
+        because the effect relies on their values to determine when to advance frames and when to stop playback.
+        - `currentFrame`: When this changes (e.g., user clicks a marker or playback advances), the effect needs to re-run
+          to schedule the next frame or stop playback if at the end.
+        - `frames.length`: If the number of frames ever changes (e.g., new data loaded), the effect should re-evaluate
+          the stopping condition (`next >= frames.length`).
+        Without these dependencies, the effect could use stale values and not behave correctly.
+        */
+    }, [play, currentFrame, frames.length]);
+
+
+    const togglePlay = () => {
+        setPlay(prev => !prev);
+    }
     return (
         <div className="Verka">
             <Frame
                 frame={frames[currentFrame]}
                 currentFrame={currentFrame}
                 onMarkerClick={handleMarkerClick}
+                play={play}
+                togglePlay={togglePlay}
             />
         </div>
     );
