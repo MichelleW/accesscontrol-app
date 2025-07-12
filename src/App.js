@@ -3,8 +3,8 @@
 import React from 'react';
 import './App.css';
 import './components/VerkadaPlayer/style.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import VerkadaPlayer from './components/VerkadaPlayer/VerkadaPlayer';
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import AccessRoleManager from './components/AccessRoles/AccessRoleManager/AccessRoleManager';
 
 
 
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <VerkadaPlayer />
+      <AccessRoleManager/>
     </div>
   );
 }

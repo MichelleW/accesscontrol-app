@@ -1,0 +1,28 @@
+.access-role-manager {
+  font-family: sans-serif;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.access-role-manager table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.access-role-manager th, .access-role-manager td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.access-role-manager select {
+  width: 100%;
+  padding: 0.25rem;
+}
+
+.access-role-manager button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
