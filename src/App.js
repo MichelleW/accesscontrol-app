@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      <RoleCard users={users}/>
+      <RoleCard users={users} />
     </div>
   );
 }
