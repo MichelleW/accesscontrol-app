@@ -1,10 +1,8 @@
 // File: src/App.js
 
 import React from 'react';
-import './App.css';
-import './components/VerkadaPlayer/style.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';  
-import RoleCard from './components/RoleCard/RoleCard';
+import './App.scss';
+import MoodTracker from './components/mood-tracker/mood-tracker';
 
 const users = [{
   name: "Jasmine Lee",
@@ -26,8 +24,8 @@ function App() {
 
   return (
     <div className="App">
-      <RoleCard users={users} />
-    </div>
+    <MoodTracker />
+     </div>
   );
 }
 
