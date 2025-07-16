@@ -11,7 +11,8 @@
   margin-bottom: 1rem;
 }
 
-.access-role-manager th, .access-role-manager td {
+.access-role-manager th,
+.access-role-manager td {
   border: 1px solid #ccc;
   padding: 0.5rem;
   text-align: left;
@@ -25,4 +26,80 @@
 .access-role-manager button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
+}
+
+/* Role Dropdown Styles */
+.role-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.role-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  min-width: 120px;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  border-radius: 0.375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+.role-dropdown-menu .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.role-dropdown-menu .dropdown-item:hover {
+  color: #1e2125;
+  background-color: #e9ecef;
+}
+
+.role-dropdown-menu .dropdown-item:focus {
+  color: #1e2125;
+  background-color: #e9ecef;
+  outline: none;
+}
+
+/* Arrow button styles */
+.role-dropdown-container .btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+}
+
+/* Table cell alignment */
+.role {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .role-dropdown-menu {
+    right: auto;
+    left: 0;
+  }
 }
