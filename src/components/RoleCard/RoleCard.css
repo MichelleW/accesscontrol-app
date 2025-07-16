@@ -79,18 +79,6 @@
 }
 
 
-.green {
-    border: 3px solid green;
-}
-
-.blue {
-    border: 3px solid blue;
-}
-
-.gray {
-    border: 3px solid gray;
-}
-
 @media (max-width: 646px) {
     .role-card {
         flex-direction: column;
