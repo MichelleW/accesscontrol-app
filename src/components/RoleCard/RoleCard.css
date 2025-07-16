@@ -1,20 +1,24 @@
 .role-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    gap: 1rem;
     justify-content: center;
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    padding: 0 10px 10px 10px   ;
+    padding: 0 10px 10px 10px;
 }
 
 .card {
-    width: 300px;
-    height: 300px;
+    width: 340px;
+    min-height: 340px;
     border: 3px solid #eee;
     border-radius: 30px;
-    padding: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .profile {
@@ -23,7 +27,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 120px;
+    margin-bottom: 15px;
 }
 
 .user-info {
@@ -32,12 +38,13 @@
     align-items: center;
     justify-content: center;
     margin-left: 20px;
-    
+
 }
 
-.name{
+.name {
     font-weight: bold;
 }
+
 .profile-pic {
     width: 100px;
     height: 100px;
@@ -50,7 +57,52 @@
     height: 100%;
 }
 
-.profile-dec{
-     margin-bottom: 20px;
-     text-align: left;
+.profile-dec {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Role-based card styling */
+.card.blue {
+    border-color: #007bff;
+    background-color: #f8f9ff;
+}
+
+.card.green {
+    border-color: #28a745;
+    background-color: #f8fff9;
+}
+
+.card.gray {
+    border-color: #6c757d;
+    background-color: #f8f9fa;
+}
+
+
+.green {
+    border: 3px solid green;
+}
+
+.blue {
+    border: 3px solid blue;
+}
+
+.gray {
+    border: 3px solid gray;
+}
+
+@media (max-width: 646px) {
+    .role-card {
+        flex-direction: column;
+    }
+    .profile{
+        flex-direction: column;
+    }
+    .profile-pic{
+        width: 100px;
+        height: 100px;
+    }
+    .user-info{
+        margin-left: 0;
+    }
 }
