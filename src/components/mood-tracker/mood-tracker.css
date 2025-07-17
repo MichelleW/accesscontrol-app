@@ -38,8 +38,13 @@ button.mood {
     border: 0;
     border-radius: 20%;
 
-    &hover {
-        transform: scale(1.1);
+    &:hover {
+        transform: scale(1.2);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    &.active{
+        scale: 1.2;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 }
