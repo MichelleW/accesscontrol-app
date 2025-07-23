@@ -1,5 +1,4 @@
 
-import React from 'react'
 import './DeleteBtn.css'
 
 const DeleteBtn = ({ mood, updateMoodState }) => {

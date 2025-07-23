@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './mood-tracker.css';
+import { useState, useEffect } from 'react';
+import './MoodTracker.css';
 import DeleteBtn from '../DeleteBtn/DeleteBtn';
 const defaultMood = [
     {

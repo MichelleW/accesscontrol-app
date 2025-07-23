@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './habit-tracker.css';
+import { useState, useEffect } from 'react';
+import './HabitTracker.css';
 
 const HabitTracker = () => {
     const [habits, setHabits] = useState([]);
