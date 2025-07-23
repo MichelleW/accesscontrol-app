@@ -1,6 +1,33 @@
 .mood-tracker {
-    font-size: .8rem;
-    /* width: 500px; */
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 80%;
+    margin-top: 5%;
+}
+
+.mood-tracker>* {
+    flex: 1 1 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+.mood-history {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 50%;
+    flex: 0 0 50%;
+}
+
+.mood-history .card {
+    flex: 0 0 calc(33.333% - 7px);
+    min-width: 200px;
+    box-sizing: border-box;
 }
 
 .card {
@@ -8,7 +35,8 @@
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    min-width: 450px;
+
 }
 
 .card h2 {
@@ -16,6 +44,7 @@
     color: #333;
     font-size: 1.2rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .mood-emojis {
@@ -29,7 +58,7 @@
 button.mood {
     background: #f8f9fa;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -42,10 +71,10 @@ button.mood {
         transform: scale(1.2);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
-    
-    &.active{
-        scale: 1.2;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    &.active {
+        scale: 1.5;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -62,25 +91,29 @@ button.mood {
 
 .note-input {
     display: block;
-    border: 1px solid var(--gray-800);
+    border: 1px solid var(--input-border);
     padding: 12px 16px;
     border-radius: 8px;
-    color: #999;
-    box-shadow: 0 0 0 3px rgba(72, 73, 75, 0.1);
+    color: var(--input-color);
+    box-shadow: var(--input-focus-shadow);
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+        border: 1px solid var(--gray-500);
+        box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.2);
+    }
 }
 
 .note-input input::placeholder {
-    color: #999;
-    font-size: 1rem;
-    font-style: italic;
+    font-size: var(--input-font-size);
 }
 
 .save-btn {
     padding: 12px;
-    background: #6c757d;
+    background: var(--info-color);
     color: white;
     border: none;
     border-radius: 8px;
@@ -92,9 +125,8 @@ button.mood {
 }
 
 .save-btn:hover {
-    background: #5a6268;
+    background: var(--info-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
 }
 
 .save-btn:disabled {
@@ -102,4 +134,30 @@ button.mood {
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .mood-tracker {
+        margin-top: 10%;
+        flex-direction: column;
+    }
+
+    .mood-history {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .mood-tracker>* {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .mood-history .card {
+        flex: 0 0 100%;
+    }
+
+    .card {
+        min-width: 0;
+    }
 }
