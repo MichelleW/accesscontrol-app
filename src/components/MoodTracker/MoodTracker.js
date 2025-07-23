@@ -105,7 +105,12 @@ const MoodTracker = () => {
                         <div className="card" key={idx}
                             style={{ backgroundColor: moodOptions.find(option => option.value === mood.mood)?.color }}
                         >
-                            <DeleteBtn mood={mood} updateMoodState={updateMoodState} />
+                            <DeleteBtn
+                                item={mood}
+                                onDelete={updateMoodState}
+                                showConfirmation={true}
+                                confirmationMessage="Are you sure you want to delete this mood entry?"
+                            />
                             <h4>Current mood: {moodOptions.find(option => option.value === mood.mood)?.label}</h4>
                             <p><b>Note:</b> {mood.note}</p>
                         </div>
