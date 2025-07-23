@@ -22,13 +22,15 @@
     gap: 10px;
     width: 50%;
     flex: 0 0 50%;
+
+    >.card{
+        position: relative;
+        flex: 0 0 calc(33.333% - 7px);
+        min-width: 200px;
+        box-sizing: border-box; 
+    }
 }
 
-.mood-history .card {
-    flex: 0 0 calc(33.333% - 7px);
-    min-width: 200px;
-    box-sizing: border-box;
-}
 
 .card {
     background: white;
@@ -47,6 +49,9 @@
     text-align: center;
 }
 
+.mood-card{
+    position: relative;
+}
 .mood-emojis {
     display: flex;
     gap: 10px;

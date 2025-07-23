@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './mood-tracker.css';
+import DeleteBtn from '../DeleteBtn/DeleteBtn';
 const defaultMood = [
     {
         "mood": "good",
@@ -7,26 +8,26 @@ const defaultMood = [
     },
     {
         "mood": "terrible",
-        "note": "adfd"
+        "note": "bdfd"
     },
     {
         "mood": "neutral",
-        "note": "adfd"
+        "note": "cdfd"
     },
     {
         "mood": "terrible",
-        "note": "adfad"
+        "note": "ddfad"
     },
     {
         "mood": "good",
-        "note": "adfad"
+        "note": "edfad"
     }
 ]
 const MoodTracker = () => {
     const [mood, setMood] = useState({});
-    const [moodHistory, setMoodHistory] = useState([]);
+    const [moodHistory, setMoodHistory] = useState(defaultMood);
     const [selectedMood, setSelectedMood] = useState('');
-    console.log('moodHistory', moodHistory.length)
+
     function handleMoodChange(e) {
         const { value, name } = e.target;
 
@@ -59,7 +60,11 @@ const MoodTracker = () => {
         { value: 'bad', label: '😔', color: '#FF9800' },
         { value: 'terrible', label: '😢', color: '#F44336' }
     ];
-
+    const updateMoodState = (moodToDelete) => {
+        setMoodHistory(prev => {
+            return prev.filter(m => !(m.mood === moodToDelete.mood && m.note === moodToDelete.note));
+        });
+    }
     useEffect(() => {
         localStorage.setItem('moodHistory', JSON.stringify(moodHistory));
     }, [moodHistory]);
@@ -100,6 +105,7 @@ const MoodTracker = () => {
                         <div className="card" key={idx}
                             style={{ backgroundColor: moodOptions.find(option => option.value === mood.mood)?.color }}
                         >
+                            <DeleteBtn mood={mood} updateMoodState={updateMoodState} />
                             <h4>Current mood: {moodOptions.find(option => option.value === mood.mood)?.label}</h4>
                             <p><b>Note:</b> {mood.note}</p>
                         </div>
