@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './MoodTracker.css';
 import DeleteBtn from '../DeleteBtn/DeleteBtn';
+import NewHabit from '../NewHabit/NewHabit';
 const defaultMood = [
     {
         "mood": "good",
@@ -72,7 +73,8 @@ const MoodTracker = () => {
 
     return (
         <div className="mood-tracker">
-            <div className="mood-card card">
+            <div className="mood-card">
+            <div className="card">
                 <h2>How are you feeling today?</h2>
                 <div className="mood-emojis">
                     {moodOptions.map((mood, idx) => (
@@ -96,6 +98,8 @@ const MoodTracker = () => {
                         onChange={handleMoodChange} />
                     <button className="save-btn" onClick={handleSaveMood}   >Save</button>
                 </div>
+            </div>
+                <NewHabit />
             </div>
             {(moodHistory.length > 0) ? (
 
