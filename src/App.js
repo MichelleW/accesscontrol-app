@@ -1,7 +1,7 @@
 // File: src/App.js
 
 import './App.scss';
-  import HabitTable from './components/HabitTable/HabitTable';
+import HabbitTable from './components/HabbitTable/HabbitTable';
 
 const users = [{
   name: "Jasmine Lee",
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <HabitTable/>  
+      <HabbitTable />
     </div>
   );
 }

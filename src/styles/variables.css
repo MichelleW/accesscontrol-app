@@ -178,9 +178,9 @@
     --mood-btn-font-size: var(--font-size-xl);
     --mood-btn-bg: var(--gray-50);
 
-    /* Habit Tracker Specific */
-    --habit-card-gap: var(--space-md);
-    --habit-stats-bg: var(--gray-50);
+    /* Habbit Tracker Specific */
+    --habbit-card-gap: var(--space-md);
+    --habbit-stats-bg: var(--gray-50);
     --streak-badge-bg: #fff3e0;
     --streak-badge-color: #f57c00;
 }

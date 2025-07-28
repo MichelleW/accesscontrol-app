@@ -1,6 +1,6 @@
-import './NewHabit.css'
+import './NewHabbit.css'
 
-const NewHabit = ({ habit }) => { 
+const NewHabbit = ({ habit }) => {
     const checkBox = () => (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const NewHabit = ({ habit }) => {
         })
     }
     return (
-        <div className='new-habit card'>
+        <div className='new-habbit card'>
             <h2>Walk 10 Mintues</h2>
             <div className='weekdays'>
                 {displayWeekDays()}
@@ -38,4 +38,4 @@ const NewHabit = ({ habit }) => {
     )
 }
 
-export default NewHabit 
+export default NewHabbit 

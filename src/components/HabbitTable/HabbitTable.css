@@ -1,4 +1,4 @@
-.habit-table {
+.habbit-table {
     background: white;
     border-radius: 12px;
     padding: 20px;
@@ -8,7 +8,7 @@
     color: black;
 }
 
-.habit-table h1 {
+.habbit-table h1 {
     text-align: center;
     /* margin-bottom: 20px;
     color: black;
@@ -16,39 +16,39 @@
     font-weight: 600; */
 }
 
-.habit-table table {
-    color: black; 
+.habbit-table table {
+    color: black;
     width: 100%;
     border-collapse: collapse;
     font-family: var(--font-family-primary);
 }
 
-.habit-table th,
-.habit-table td {
+.habbit-table th,
+.habbit-table td {
     padding: 12px 8px;
     text-align: center;
     /* border-bottom: 1px solid var(--border-light); */
 }
 
-.habit-table th {
+.habbit-table th {
     background: var(--gray-100);
     font-weight: 600;
     color: black;
-    
+
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.habit-table .habit-name-header {
+.habbit-table .habbit-name-header {
     text-align: left;
     font-weight: 600;
     color: black;
-    
+
     font-size: 1rem;
 }
 
-.habit-table .habit-name {
+.habbit-table .habbit-name {
     text-align: left;
     font-weight: 500;
     color: black;
@@ -56,13 +56,13 @@
     font-size: 1rem;
 }
 
-.habit-table .day-header {
+.habbit-table .day-header {
     font-size: 0.8rem;
     color: var(--gray-600);
     font-weight: bold;
 }
 
-.habit-table .checkbox-cell {
+.habbit-table .checkbox-cell {
     padding: 8px;
     vertical-align: middle;
 }
@@ -96,19 +96,19 @@
     color: white;
 }
 
-.habit-row:hover {
+.habbit-row:hover {
     background: var(--success-light);
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .habit-table {
+    .habbit-table {
         margin: 10px;
         padding: 15px;
     }
 
-    .habit-table th,
-    .habit-table td {
+    .habbit-table th,
+    .habbit-table td {
         padding: 8px 4px;
         font-size: 0.8rem;
     }

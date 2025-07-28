@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './MoodTracker.css';
 import DeleteBtn from '../DeleteBtn/DeleteBtn';
-import NewHabit from '../NewHabit/NewHabit';
+import NewHabbit from '../NewHabbit/NewHabbit';
 const defaultMood = [
     {
         "mood": "good",
@@ -74,32 +74,32 @@ const MoodTracker = () => {
     return (
         <div className="mood-tracker">
             <div className="mood-card">
-            <div className="card">
-                <h2>How are you feeling today?</h2>
-                <div className="mood-emojis">
-                    {moodOptions.map((mood, idx) => (
-                        <button
-                            className={`mood ${selectedMood === mood.value ? 'active' : ''}`}
-                            name="mood"
-                            key={idx}
-                            style={{ backgroundColor: mood.color }}
-                            value={mood.value}
-                            onClick={handleMoodChange}
-                        >
-                            {mood.label}
-                        </button>
-                    ))}
+                <div className="card">
+                    <h2>How are you feeling today?</h2>
+                    <div className="mood-emojis">
+                        {moodOptions.map((mood, idx) => (
+                            <button
+                                className={`mood ${selectedMood === mood.value ? 'active' : ''}`}
+                                name="mood"
+                                key={idx}
+                                style={{ backgroundColor: mood.color }}
+                                value={mood.value}
+                                onClick={handleMoodChange}
+                            >
+                                {mood.label}
+                            </button>
+                        ))}
+                    </div>
+                    <div className="mood-actions">
+                        <input className="note-input"
+                            type="text"
+                            placeholder="Add a note..."
+                            name="note"
+                            onChange={handleMoodChange} />
+                        <button className="save-btn" onClick={handleSaveMood}   >Save</button>
+                    </div>
                 </div>
-                <div className="mood-actions">
-                    <input className="note-input"
-                        type="text"
-                        placeholder="Add a note..."
-                        name="note"
-                        onChange={handleMoodChange} />
-                    <button className="save-btn" onClick={handleSaveMood}   >Save</button>
-                </div>
-            </div>
-                <NewHabit />
+                <NewHabbit />
             </div>
             {(moodHistory.length > 0) ? (
 
