@@ -1,0 +1,381 @@
+.habbit-completion-checker {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.checker-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.checker-header h1 {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.checker-header p {
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Stats Dashboard */
+.stats-dashboard {
+    margin-bottom: 40px;
+}
+
+.stats-dashboard h2 {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.stat-header h3 {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.streak-badge2 {
+    background: #fff3cd;
+    color: #856404;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.completion-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.completion-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.stat-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Completion Table */
+.completion-table-section {
+    margin-bottom: 40px;
+}
+
+.completion-table-section h2 {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.completion-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.completion-table th {
+    background: #f8f9fa;
+    padding: 15px 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e9ecef;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.completion-table td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.habit-name-header {
+    text-align: left !important;
+    padding-left: 20px !important;
+}
+
+.habit-name {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.habit-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.habit-title {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.habit-category {
+    font-size: 0.8rem;
+    color: #666;
+    background: #f8f9fa;
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.completion-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #dee2e6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.completion-checkbox:hover {
+    border-color: #007bff;
+    transform: scale(1.05);
+}
+
+.completion-checkbox.completed {
+    background: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.completion-checkbox.completed svg {
+    color: white;
+}
+
+.completion-rate {
+    padding: 8px 12px;
+}
+
+.rate-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.rate-percentage {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.mini-progress {
+    width: 60px;
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.mini-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* Insights Section */
+.insights-section {
+    margin-top: 40px;
+}
+
+.insights-section h2 {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.insight-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.insight-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.best-habit {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.best-habit .habit-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.best-habit .completion-rate {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffd700;
+}
+
+.total-completions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.completion-count {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.completion-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.average-rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rate-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .habbit-completion-checker {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .checker-header h1 {
+        font-size: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .completion-table th,
+    .completion-table td {
+        padding: 8px 4px;
+        font-size: 0.8rem;
+    }
+
+    .habit-title {
+        font-size: 0.9rem;
+    }
+
+    .habit-category {
+        font-size: 0.7rem;
+    }
+
+    .completion-checkbox {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .checker-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .checker-header p {
+        font-size: 1rem;
+    }
+
+    .completion-table {
+        font-size: 0.75rem;
+    }
+
+    .insight-card {
+        padding: 20px;
+    }
+
+    .completion-count,
+    .rate-number {
+        font-size: 2rem;
+    }
+}

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './MoodTracker.css';
-import DeleteBtn from '../DeleteBtn/DeleteBtn';
-import NewHabbit from '../NewHabbit/NewHabbit';
+import DeleteBtn from '../DeleteBtn/DeleteBtn'; 
 const defaultMood = [
     {
         "mood": "good",
@@ -99,7 +98,7 @@ const MoodTracker = () => {
                         <button className="save-btn" onClick={handleSaveMood}   >Save</button>
                     </div>
                 </div>
-                <NewHabbit />
+                
             </div>
             {(moodHistory.length > 0) ? (
 
