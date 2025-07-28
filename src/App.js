@@ -1,7 +1,7 @@
 // File: src/App.js
 
 import './App.scss';
-import MoodTracker from './components/MoodTracker/MoodTracker';
+  import HabitTable from './components/HabitTable/HabitTable';
 
 const users = [{
   name: "Jasmine Lee",
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <MoodTracker />
+      <HabitTable/>  
     </div>
   );
 }

@@ -1,0 +1,120 @@
+.habit-table {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow-x: auto;
+    color: black;
+}
+
+.habit-table h1 {
+    text-align: center;
+    /* margin-bottom: 20px;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 600; */
+}
+
+.habit-table table {
+    color: black; 
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-family-primary);
+}
+
+.habit-table th,
+.habit-table td {
+    padding: 12px 8px;
+    text-align: center;
+    /* border-bottom: 1px solid var(--border-light); */
+}
+
+.habit-table th {
+    background: var(--gray-100);
+    font-weight: 600;
+    color: black;
+    
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.habit-table .habit-name-header {
+    text-align: left;
+    font-weight: 600;
+    color: black;
+    
+    font-size: 1rem;
+}
+
+.habit-table .habit-name {
+    text-align: left;
+    font-weight: 500;
+    color: black;
+    ;
+    font-size: 1rem;
+}
+
+.habit-table .day-header {
+    font-size: 0.8rem;
+    color: var(--gray-600);
+    font-weight: bold;
+}
+
+.habit-table .checkbox-cell {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--border-medium);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.checkbox:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.checkbox.checked {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.checkbox.checked svg {
+    color: white;
+}
+
+.habit-row:hover {
+    background: var(--success-light);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .habit-table {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .habit-table th,
+    .habit-table td {
+        padding: 8px 4px;
+        font-size: 0.8rem;
+    }
+
+    .checkbox {
+        width: 20px;
+        height: 20px;
+    }
+}
