@@ -1,11 +1,12 @@
 .habbit-completion-checker {
-    background: white;
+    background: var(--background);
     border-radius: 16px;
     padding: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     margin: 20px;
     max-width: 1200px;
     margin: 20px auto;
+    color: var(--text);
 }
 
 .checker-header {
@@ -14,14 +15,14 @@
 }
 
 .checker-header h1 {
-    color: #333;
+    color: var(--text);
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .checker-header p {
-    color: #666;
+    color: var(--textSecondary);
     font-size: 1.1rem;
     margin: 0;
 }
@@ -32,7 +33,7 @@
 }
 
 .stats-dashboard h2 {
-    color: #333;
+    color: var(--text);
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 20px;
@@ -45,10 +46,10 @@
 }
 
 .stat-card {
-    background: #f8f9fa;
+    background: var(--surface);
     border-radius: 12px;
     padding: 20px;
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--border);
     transition: all 0.3s ease;
 }
 
@@ -65,7 +66,7 @@
 }
 
 .stat-header h3 {
-    color: #333;
+    color: var(--text);
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0;
@@ -83,7 +84,7 @@
 .completion-bar {
     width: 100%;
     height: 8px;
-    background: #e9ecef;
+    background: var(--border);
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 10px;
@@ -95,11 +96,27 @@
     transition: width 0.3s ease;
 }
 
+.green {
+    background-color: #4CAF50;
+}
+
+.yellow {
+    background-color: #FFC107;
+}
+
+.orange {
+    background-color: #FF9800;
+}
+
+.red {
+    background-color: #F44336;
+}
+
 .stat-details {
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
-    color: #666;
+    color: var(--textSecondary);
 }
 
 /* Completion Table */
@@ -108,7 +125,7 @@
 }
 
 .completion-table-section h2 {
-    color: #333;
+    color: var(--text);
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 20px;
@@ -117,22 +134,22 @@
 .table-container {
     overflow-x: auto;
     border-radius: 12px;
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--border);
 }
 
 .completion-table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: var(--background);
 }
 
 .completion-table th {
-    background: #f8f9fa;
+    background: var(--surface);
     padding: 15px 12px;
     text-align: center;
     font-weight: 600;
-    color: #333;
-    border-bottom: 2px solid #e9ecef;
+    color: var(--text);
+    border-bottom: 2px solid var(--border);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -141,7 +158,7 @@
 .completion-table td {
     padding: 12px 8px;
     text-align: center;
-    border-bottom: 1px solid #f1f3f4;
+    border-bottom: 1px solid var(--border);
 }
 
 .habit-name-header {
@@ -162,14 +179,14 @@
 
 .habit-title {
     font-weight: 600;
-    color: #333;
+    color: var(--text);
     font-size: 1rem;
 }
 
 .habit-category {
     font-size: 0.8rem;
-    color: #666;
-    background: #f8f9fa;
+    color: var(--textSecondary);
+    background: var(--surface);
     padding: 2px 8px;
     border-radius: 12px;
     display: inline-block;
@@ -178,7 +195,7 @@
 .completion-checkbox {
     width: 24px;
     height: 24px;
-    border: 2px solid #dee2e6;
+    border: 2px solid var(--border);
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -186,17 +203,17 @@
     margin: 0 auto;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: white;
+    background: var(--background);
 }
 
 .completion-checkbox:hover {
-    border-color: #007bff;
+    border-color: var(--primary);
     transform: scale(1.05);
 }
 
 .completion-checkbox.completed {
-    background: #28a745;
-    border-color: #28a745;
+    background: var(--success);
+    border-color: var(--success);
     color: white;
 }
 
@@ -217,14 +234,14 @@
 
 .rate-percentage {
     font-weight: 600;
-    color: #333;
+    color: var(--text);
     font-size: 1rem;
 }
 
 .mini-progress {
     width: 60px;
     height: 4px;
-    background: #e9ecef;
+    background: var(--border);
     border-radius: 2px;
     overflow: hidden;
 }
@@ -241,7 +258,7 @@
 }
 
 .insights-section h2 {
-    color: #333;
+    color: var(--text);
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 20px;

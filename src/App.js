@@ -1,7 +1,7 @@
 // File: src/App.js
 
 import './App.scss';
-import HabbitTable from './components/HabbitTable/HabbitTable';
+import HabbitCompletionChecker from './components/HabbitCompletionChecker/HabbitCompletionChecker';
 
 const users = [{
   name: "Jasmine Lee",
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <HabbitTable />
+      <HabbitCompletionChecker />
     </div>
   );
 }
