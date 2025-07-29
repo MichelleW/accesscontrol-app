@@ -2,29 +2,18 @@
 
 import './App.scss';
 import HabbitCompletionChecker from './components/HabbitCompletionChecker/HabbitCompletionChecker';
-
-const users = [{
-  name: "Jasmine Lee",
-  role: "Employee",
-  avatar: "https://i.pravatar.cc/150?img=37"
-}, {
-  name: "John Lee",
-  role: "Admin",
-  avatar: "https://i.pravatar.cc/150?img=35"
-}, {
-  name: "Michelle Lee",
-  role: "Visitor",
-  avatar: "https://i.pravatar.cc/150?img=32"
-}]
-
+import { ThemeProvider } from './contexts/ThemeContext';
+import ThemeWrapper from './components/shared/ThemeWrapper';
+import ThemeSwitcher from './components/shared/ThemeSwitcher';
 
 function App() {
-
-
   return (
-    <div className="App">
-      <HabbitCompletionChecker />
-    </div>
+    <ThemeProvider>
+      <ThemeWrapper className="App">
+        <ThemeSwitcher position="fixed" />
+        <HabbitCompletionChecker />
+      </ThemeWrapper>
+    </ThemeProvider>
   );
 }
 

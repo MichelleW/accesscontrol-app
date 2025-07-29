@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './HabbitCompletionChecker.css';
-import { ThemeProvider, useTheme } from './ThemeContext';
-import ThemeSwitcher from './ThemeSwitcher';
+import { useTheme } from '../../contexts/ThemeContext';
 // Sample data - in a real app, this would come from localStorage or API
 const sampleHabits = [
     {
@@ -116,22 +115,7 @@ const HabbitCompletionCheckerContent = () => {
     const days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
     return (
-        <div className="habbit-completion-checker"
-            style={{
-                '--primary': theme.colors.primary,
-                '--secondary': theme.colors.secondary,
-                '--background': theme.colors.background,
-                '--surface': theme.colors.surface,
-                '--text': theme.colors.text,
-                '--textSecondary': theme.colors.textSecondary,
-                '--border': theme.colors.border,
-                '--success': theme.colors.success,
-                '--warning': theme.colors.warning,
-                '--error': theme.colors.error,
-                '--successLight': theme.colors.successLight,
-                '--warningLight': theme.colors.warningLight,
-            }}>
-            <ThemeSwitcher />
+        <div className="habbit-completion-checker">
             <div className="checker-header">
                 <h1>Habbit Completion Checker</h1>
                 <p>Track your progress and completion rates</p>
@@ -153,6 +137,7 @@ const HabbitCompletionCheckerContent = () => {
                                 <div
                                     className={`completion-fill ${getCompletionColor(stat.completionRate)}`}
                                     style={{
+                                        backgroundColor: getCompletionColor(stat.completionRate)    ,
                                         width: `${stat.completionRate}%`
                                     }}
                                 ></div>
@@ -296,11 +281,7 @@ const HabbitCompletionCheckerContent = () => {
 };
 
 const HabbitCompletionChecker = () => {
-    return (
-        <ThemeProvider>
-            <HabbitCompletionCheckerContent />
-        </ThemeProvider>
-    );
+    return <HabbitCompletionCheckerContent />;
 };
 
 export default HabbitCompletionChecker; 

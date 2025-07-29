@@ -49,5 +49,22 @@ export const themes = {
             successLight: '#00cec9',
             warningLight: '#fdcb6e'
         }
+    },
+    sunset: {
+        name: 'Sunset',
+        colors: {
+            primary: '#ff6b6b',
+            secondary: '#feca57',
+            background: '#fff5f5',
+            surface: '#ffe8e8',
+            text: '#2d3436',
+            textSecondary: '#636e72',
+            border: '#ffd8d8',
+            success: '#00b894',
+            warning: '#fdcb6e',
+            error: '#e17055',
+            successLight: '#00cec9',
+            warningLight: '#fdcb6e'
+        }
     }
 }; 

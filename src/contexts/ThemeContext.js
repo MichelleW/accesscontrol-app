@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState } from 'react';
-import { themes } from './themes';
+import { themes } from '../themes/themes';
 
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
     const [currentTheme, setCurrentTheme] = useState(() => {
-        const savedTheme = localStorage.getItem('habbit-theme');
+        const savedTheme = localStorage.getItem('app-theme');
         return savedTheme || 'light';
     });
 
@@ -13,7 +13,7 @@ export const ThemeProvider = ({ children }) => {
 
     const switchTheme = (themeName) => {
         setCurrentTheme(themeName);
-        localStorage.setItem('habbit-theme', themeName);
+        localStorage.setItem('app-theme', themeName);
     };
 
     return (
