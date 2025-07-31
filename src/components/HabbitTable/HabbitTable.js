@@ -12,7 +12,7 @@ const HabbitTable = () => {
 
     const days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
-    // Helper function to toggle completion for a habit on a specific day 
+    // Helper function to toggle completion for a habit on a specific day
     const toggleCompletion = (habitId, dayKey) => {
         setHabits(prev =>
             prev.map(habit =>

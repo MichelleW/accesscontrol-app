@@ -39,3 +39,15 @@
     transform: rotate(360deg);
   }
 }
+
+.title{
+  background-color: var(--primary);
+  color: var(--text);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+  width: 100%;
+}

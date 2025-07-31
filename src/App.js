@@ -5,13 +5,14 @@ import HabbitCompletionChecker from './components/HabbitCompletionChecker/Habbit
 import { ThemeProvider } from './contexts/ThemeContext';
 import ThemeWrapper from './components/shared/ThemeWrapper';
 import ThemeSwitcher from './components/shared/ThemeSwitcher';
-
+import Cart from './components/Cart/Cart';
 function App() {
   return (
     <ThemeProvider>
-      <ThemeWrapper className="App">
+      <ThemeWrapper className="App">  
         <ThemeSwitcher position="fixed" />
-        <HabbitCompletionChecker />
+        {/* <h1 className="title">Mish Playground</h1> */}
+        <Cart/>
       </ThemeWrapper>
     </ThemeProvider>
   );
