@@ -23,14 +23,14 @@ const Cart = () => {
         }))
 
     }
-    function addToCart(item) {
-        setCartItems(prevItems => [...prevItems, item])
-        setTotal(calculateTotal(cartItems))
+
+    function removeItem(itemId) {
+        setCartItems(prevItems => prevItems.filter(item => item.id !== itemId));
     }
 
     function continueShopping() {
         setCartItems(sampleCartItems)
-        
+
     }
 
     function emptyCart() {
@@ -44,7 +44,7 @@ const Cart = () => {
         <div className="cart">
             <div className="header">
                 <h1>Shopping Cart</h1>
-                <div className="totalItems">{cartItems.length} items ${total.toFixed(2)}</div>
+                <div className="totalItems">{(cartItems.length) ? `${cartItems.length} items` : '0 Items'} ${total.toFixed(2)}</div>
             </div>
             {cartItems.map((item, index) => {
                 return (
@@ -57,17 +57,20 @@ const Cart = () => {
                             </div>
                         </div>
                         <div className="quantity">
-                            <div className="minus" onClick={() => handleQuantityChange(item.id, -1)}>-</div>
-                            <div className="quantity-number">{item.quantity}</div>
-                            <div className="plus" onClick={() => handleQuantityChange(item.id, 1)}>+</div>
+                            <div className="quantity-controls">
+                                <div className="minus" onClick={() => handleQuantityChange(item.id, -1)}>-</div>
+                                <div className="quantity-number">{item.quantity}</div>
+                                <div className="plus" onClick={() => handleQuantityChange(item.id, 1)}>+</div>
+                            </div>
+                            <button className="remove-item" onClick={() => removeItem(item.id)}>Remove</button>
                         </div>
                     </div>
                 )
             })}
             {cartItems.length === 0 ? (
-               <>
-                <div className="empty-cart">Your cart is empty.</div>
-                <button className="cart-button" onClick={continueShopping}>Continue Shopping</button></>
+                <>
+                    <div className="empty-cart">Your cart is empty.</div>
+                    <button className="cart-button" onClick={continueShopping}>Continue Shopping</button></>
             ) : (
                 <button className="cart-button" onClick={emptyCart}>Empty Cart</button>
             )}
